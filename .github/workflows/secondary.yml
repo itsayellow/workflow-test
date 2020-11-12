@@ -1,0 +1,15 @@
+name: Secondary
+
+on:
+  repository_dispatch:
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+    steps:
+      - name: echo stuff
+        run: |
+          echo "Secondary is executing"
