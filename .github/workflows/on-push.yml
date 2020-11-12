@@ -13,5 +13,4 @@ jobs:
         python-version: [3.8]
     steps:
       - name: echo stuff
-      - run: |
-        echo "Primary is executing"
+      - run: echo "Primary is executing"
