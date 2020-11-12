@@ -8,3 +8,6 @@ for a good example.
 
 Note that with public repositories, when creating a PAT and selecting the
 Scope, you only need one checkbox checked for `public_repo`. 
+
+## References
+https://docs.github.com/en/free-pro-team@latest/actions/reference/context-and-expression-syntax-for-github-actions
