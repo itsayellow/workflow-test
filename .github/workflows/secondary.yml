@@ -2,6 +2,7 @@ name: Secondary
 
 on:
   repository_dispatch:
+    types: [primary-invoke]
 
 jobs:
   report:
@@ -13,3 +14,5 @@ jobs:
       - name: echo stuff
         run: |
           echo "Secondary is executing"
+          echo "Message from Primary:"
+          echo ${{ github.evenv.client_payload.message }}

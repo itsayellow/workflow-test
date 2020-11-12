@@ -15,3 +15,9 @@ jobs:
       - name: echo stuff
         run: |
           echo "Primary is executing"
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1.1.3
+        with:
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          event-type: primary-invoke
+          client-payload: '{"message": "    hello from primary!"}'
