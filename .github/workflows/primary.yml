@@ -14,7 +14,9 @@ jobs:
     steps:
       - name: echo stuff
         run: |
-          echo "Primary is executing"
+          echo "Primary is executing."
+          echo "My trigger was:"
+          echo "${{ github.event_name }}"
       - name: Repository Dispatch
         if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
         uses: peter-evans/repository-dispatch@v1.1.3
