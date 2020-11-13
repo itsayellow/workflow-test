@@ -4,13 +4,16 @@ on:
   pull_request:
   push:
 
+env:
+  default_python: 3.8
+
 jobs:
   report:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.8]
     steps:
+      - name: Setup Python ${{ env.default_python }}
+        run: |
+          echo "Setting up Python ${{ env.default_python }}"
       - name: echo stuff
         run: |
           echo "Primary is executing."
@@ -27,10 +30,10 @@ jobs:
   pypi-release:
     if: success() && github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.8]
     steps:
+      - name: Setup Python ${{ env.default_python }}
+        run: |
+          echo "Setting up Python ${{ env.default_python }}"
       - name: Check out from "${{ github.ref}}"
         uses: actions/checkout@v2
       - name: echo stuff
