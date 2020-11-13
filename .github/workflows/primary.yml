@@ -25,6 +25,13 @@ jobs:
       - name: Failure
         run: |
           exit 1
+      - name: Success Test
+        if: success()
+        run: |
+          echo "This runs on success."
+      - name: Don't Care Success Test
+        run: |
+          echo "This runs always?"
       - name: Release Trigger
         if: success() && github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
         uses: peter-evans/repository-dispatch@v1.1.3
