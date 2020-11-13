@@ -14,4 +14,6 @@ https://docs.github.com/en/free-pro-team@latest/actions/reference/context-and-ex
 
 https://github.com/peter-evans/repository-dispatch
 
+https://stevenmortimer.com/running-github-actions-sequentially/#an-example
+
 https://github.com/mvasigh/dispatch-action
