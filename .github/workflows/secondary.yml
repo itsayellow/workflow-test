@@ -2,7 +2,7 @@ name: Secondary
 
 on:
   repository_dispatch:
-    types: [primary-invoke]
+    types: [pypi-release]
 
 jobs:
   report:
