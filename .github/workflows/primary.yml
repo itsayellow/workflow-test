@@ -4,6 +4,7 @@ on:
   pull_request:
   push:
   release:
+    types: [published] # each web release causes: created, published, released
 
 jobs:
   report:
