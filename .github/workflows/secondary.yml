@@ -11,10 +11,10 @@ jobs:
       matrix:
         python-version: [3.8]
     steps:
-      - name: Check out ${{ github.event.client_payload.sha}}"
+      - name: Check out ${{ github.event.client_payload.sha}}
         uses: actions/checkout@v2
         with:
-          ref:  ${{ github.event.client_payload.sha}}"
+          ref:  ${{ github.event.client_payload.sha}}
       - name: echo stuff
         run: |
           echo "Secondary is executing"
