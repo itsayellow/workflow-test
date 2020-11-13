@@ -11,8 +11,16 @@ jobs:
       matrix:
         python-version: [3.8]
     steps:
+      - name: Check out ${{ github.event.client_payload.sha}}"
+        uses: actions/checkout@v2
+        with:
+          ref:  ${{ github.event.client_payload.sha}}"
       - name: echo stuff
         run: |
           echo "Secondary is executing"
           echo "Message from Primary:"
           echo "${{ github.event.client_payload.message }}"
+          echo "Primary ref:"
+          echo "${{ github.event.client_payload.ref}}"
+          echo "Primary sha:"
+          echo "${{ github.event.client_payload.sha}}"
