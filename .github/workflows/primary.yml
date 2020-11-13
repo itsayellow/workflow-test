@@ -23,5 +23,5 @@ jobs:
         uses: peter-evans/repository-dispatch@v1.1.3
         with:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          event-type: primary-invoke
-          client-payload: '{"sha": ${{ github.sha }}, "ref": ${{ github.ref }}, "message": "    hello from primary!"}'
+          event-type: pypi-release
+          client-payload: '{"sha": "${{ github.sha }}", "ref": "${{ github.ref }}", "message": "    hello from primary!"}'
