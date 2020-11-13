@@ -11,3 +11,7 @@ Scope, you only need one checkbox checked for `public_repo`.
 
 ## References
 https://docs.github.com/en/free-pro-team@latest/actions/reference/context-and-expression-syntax-for-github-actions
+
+https://github.com/peter-evans/repository-dispatch
+
+https://github.com/mvasigh/dispatch-action
