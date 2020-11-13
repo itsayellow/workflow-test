@@ -1,4 +1,4 @@
-name: Primary
+name: Primary ${{ github.event_name }}
 
 on:
   pull_request:
