@@ -28,4 +28,4 @@ jobs:
         with:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           event-type: pypi-release
-          client-payload: '{"sha": "${{ github.sha }}", "ref": "${{ github.ref }}", "message": "    hello from primary!"}'
+          client-payload: '{"sha": "${{ github.sha }}", "ref": "${{ github.ref }}", "message": "hello from primary!"}'
